@@ -1,0 +1,176 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: system-ui, -apple-system, sans-serif;
+}
+
+
+.page-container {
+    min-height: 100vh;
+    position: relative;
+    overflow: hidden;
+}
+
+
+.background-section {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 0;
+}
+
+.background-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.background-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+
+.content-wrapper {
+    position: relative;
+    z-index: 10;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+}
+
+
+.main-title {
+    font-size: 4rem;
+    font-weight: 700;
+    color: white;
+    margin-bottom: 3rem;
+    text-align: center;
+    letter-spacing: -0.025em;
+    filter: drop-shadow(0 25px 25px rgb(0 0 0 / 0.10));
+}
+
+
+.content-box {
+    background-color: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 1rem;
+    padding: 2rem;
+    max-width: 42rem;
+    width: 100%;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+}
+
+.content-inner {
+    color: white;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+
+.section {
+    display: flex;
+    flex-direction: column;
+}
+
+.section-title {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.section-text {
+    font-size: 1.125rem;
+    line-height: 1.75;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.subsection-title {
+    font-size: 1.25rem;
+    font-weight: 500;
+    margin-bottom: 0.75rem;
+    color: rgba(255, 255, 255, 0.9);
+}
+
+
+.skills-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.skill-tag {
+    padding: 0.25rem 0.75rem;
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 9999px;
+    font-size: 0.875rem;
+    backdrop-filter: blur(4px);
+}
+
+
+.contact-text {
+    color: rgba(255, 255, 255, 0.8);
+    margin-bottom: 1rem;
+}
+
+.contact-buttons {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.contact-btn {
+    padding: 0.5rem 1rem;
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 0.5rem;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(4px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    color: white;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.contact-btn:hover {
+    background-color: rgba(255, 255, 255, 0.3);
+    border-color: rgba(255, 255, 255, 0.5);
+}
+
+
+@media (min-width: 768px) {
+    .main-title {
+        font-size: 6rem;
+    }
+    
+    .content-box {
+        padding: 3rem;
+    }
+}
+
+@media (max-width: 640px) {
+    .contact-buttons {
+        flex-direction: column;
+    }
+    
+    .contact-btn {
+        text-align: center;
+    }
+}
